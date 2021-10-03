@@ -13,15 +13,16 @@
     </head>
     <body>
         <h1>Age Calculator</h1>
-        <form method="POST" action="main">
+        <form method="POST" action="age_cal">
             <label>Enter your age:</label>
             <br>
-            <input type="number" name="age" value="${age1}">
+            <input type="number" name="age" value="${age2}">
             <br>
-            <button type="button">Age next birthday</button>
+            <button type="submit">Age next birthday</button>
             <br>
-            <a href="servlets/arithmeic_calc.java">Arithmetic Calculator</a>
+            <a href="arithmetic_cal">Arithmetic Calculator</a>
         </form>
         <p>${error}</p>
+        <p>${newage}</p>
     </body>
 </html>

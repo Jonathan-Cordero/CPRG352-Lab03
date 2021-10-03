@@ -4,14 +4,20 @@
         <servlet-name>age_cal</servlet-name>
         <servlet-class>servlet.age_cal</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>arithmetic_cal</servlet-name>
+        <servlet-class>servlet.arithmetic_cal</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>age_cal</servlet-name>
         <url-pattern>/age_cal</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>arithmetic_cal</servlet-name>
+        <url-pattern>/arithmetic_cal</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
     <welcome-file-list>
         <welcome-file>age_cal</welcome-file>

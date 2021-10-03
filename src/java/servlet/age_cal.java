@@ -20,12 +20,20 @@ public class age_cal extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String age1 = "";
+        
         age1 = request.getParameter("age");
-        request.setAttribute("age", age1);
+        request.setAttribute("age2", age1);
         if(age1 == null || age1.equals("")){
         request.setAttribute("error", "You must give your current age");
         getServletContext().getRequestDispatcher("/WEB-INF/age_calculator.jsp").forward(request, response);
         return;
+        }
+        else{
+           int ageplus = Integer.parseInt(age1);
+           ageplus += 1;
+           request.setAttribute("newage", "Your age new birthday will be " + ageplus);
+           getServletContext().getRequestDispatcher("/WEB-INF/age_calculator.jsp").forward(request, response);
+           return;
         }
     }
 }

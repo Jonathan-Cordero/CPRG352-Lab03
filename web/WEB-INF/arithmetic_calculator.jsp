@@ -1,6 +1,6 @@
 <%-- 
     Document   : arithmetic_calculator
-    Created on : 1-Oct-2021, 6:52:49 PM
+    Created on : 2-Oct-2021, 8:54:37 PM
     Author     : Jonny
 --%>
 
@@ -9,9 +9,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Arithmetic Calculator</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Arithmetic Calculator</h1>
+        <form method="POST" action="arithmetic_cal">
+            <label>First:</label>
+            <input type="number" name="first_num" value="${num1}">
+            <br>
+            <label>Second:</label>
+            <input type="number" name="second_num" value="${num2}">
+            <br>
+            <button type="submit" name="calc" value="plus">+</button>
+            <button type="submit" name="calc" value="minus">-</button>
+            <button type="submit" name="calc" value="multiply">*</button>
+            <button type="submit" name="calc" value="mod">%</button>
+            <br>
+            <a href="age_cal">Age Calculator</a>
+        </form>
+            <p>Result: ${error}${result}</p>
     </body>
 </html>
